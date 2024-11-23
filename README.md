@@ -1,4 +1,4 @@
-# Bi-Cycle Store B4A2V4
+# Bi-Cycle Store IMS
 
 ## Project Overview
 
