@@ -22,18 +22,20 @@ const getAllproducts = async (req: Request, res: Response) => {
   try {
     const searchTerm = req.query.searchTerm;
     const result = await productService.getAllproduct(searchTerm as string);
+
     if (result.length === 0) {
-      return res.status(404).json({
+      res.status(404).json({
         status: false,
         message: 'Data not available',
         data: {},
       });
+    } else {
+      res.status(200).json({
+        status: true,
+        message: 'get all Bicycle successfully !',
+        data: result,
+      });
     }
-    res.status(200).json({
-      status: true,
-      message: 'get all Bicycle successfully !',
-      data: result,
-    });
   } catch (error) {
     res.status(500).json({
       status: false,
