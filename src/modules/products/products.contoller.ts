@@ -26,7 +26,7 @@ const getAllproducts = async (req: Request, res: Response) => {
       return res.status(404).json({
         status: false,
         message: 'Data not available',
-        data: [],
+        data: {},
       });
     }
     res.status(200).json({
