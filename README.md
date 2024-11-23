@@ -22,3 +22,122 @@ An Express application built with TypeScript and MongoDB, managing a bicycle sto
   - Retrieve bicycles by search terms for attributes like name, brand, and type.
 
 ---
+
+## Getting Started
+
+---
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+    git clone https://github.com/rezwanhossen/Assigment-2.git
+```
+
+2. Install dependencies:
+
+```bash
+    npm install
+```
+
+3. Set up environment variables:
+
+- Create a .env file in the root directory.
+- Add the following variables: add your database username and password
+
+```bash
+PORT=5000
+MONGO_URI=mongodb+srv://<db_username>:<db_password>@cluster0.p5jkrsj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+```
+
+4. Start the application:
+
+```bash
+    npm run start:dev
+```
+
+---
+
+# API Endpoints
+
+---
+
+<h1> Bicycle Management</h1>
+
+1. Create Bicycle
+
+- POST /api/products
+
+```bash
+    {
+  "name": "Roadster 5000",
+  "brand": "SpeedX",
+  "price": 300,
+  "type": "Road",
+  "description": "A premium road bike designed for speed and performance.",
+  "quantity": 20,
+  "inStock": true
+}
+
+```
+
+2. Get All Bicycles
+
+- GET /api/products
+- Query (Optional): searchTerm=name|brand|type
+
+3. Get a Specific Bicycle
+
+- GET /api/products/:productId
+
+4. Update Bicycle
+
+- PUT /api/products/:productId
+
+```bash
+{
+  "price": 350,
+  "quantity": 15
+}
+
+
+```
+
+5. Delete Bicycle
+
+- DELETE /api/products/:productId
+
+<h1>Order Management</h1>
+
+1. Create Order
+
+- POST /api/orders
+
+```bash
+{
+  "email": "customer@example.com",
+  "product": "productId_here",
+  "quantity": 2,
+
+}
+
+
+```
+
+2. Calculate Revenue
+
+- /api/orders/revenue
+
+---
+
+## Contributions
+
+Contributions are welcome! Please follow these steps:
+
+- Fork the repository.
+- Create a new branch `bash git checkout -b feature-name `.
+- Commit your changes `bash git commit -m "Added feature X" `.
+- Push to the branch `bash git push origin feature-name `.
+- Open a pull request.
