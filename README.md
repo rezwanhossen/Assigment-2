@@ -8,6 +8,32 @@ An Express application built with TypeScript and MongoDB, managing a bicycle sto
 
 ---
 
+- **Exploring Design Patterns for Express.js**
+- Feature-Based Pattern (Modular)
+  </br>
+  The Feature-Based structure is one of the most intuitive patterns for organizing an Express.js application.
+- Why Choose Feature-Based?
+  Encapsulation: Each feature is self-contained, making it easy to manage and test.
+  Scalability: New features can be added easily without affecting the existing codebase.
+  Improved Focus: Having all related files in one place makes it easier to focus on a feature.
+- Example Folder Structure:
+  `
+ project/
+├── src/
+│   ├── features/
+│   │   ├── books/
+│   │   │   ├── bookModel.ts
+│   │   │   ├── bookController.ts
+│   │   │   ├── bookRoutes.ts
+│   │   │   └── bookService.ts
+│   │   ├── orders/
+│   │   │   ├── orderModel.ts
+│   │   │   ├── orderController.ts
+│   │   │   ├── orderRoutes.ts
+│   │   │   └── orderService.ts
+│   ├── app.ts
+│   └── server.ts`
+
 - **Bicycle Management**
 
   - Add, update, get and delete bicycle details.
