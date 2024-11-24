@@ -17,22 +17,24 @@ An Express application built with TypeScript and MongoDB, managing a bicycle sto
   Scalability: New features can be added easily without affecting the existing codebase.
   Improved Focus: Having all related files in one place makes it easier to focus on a feature.
 - Example Folder Structure:
-  `
- project/
-├── src/
-│   ├── features/
-│   │   ├── books/
-│   │   │   ├── bookModel.ts
-│   │   │   ├── bookController.ts
-│   │   │   ├── bookRoutes.ts
-│   │   │   └── bookService.ts
-│   │   ├── orders/
-│   │   │   ├── orderModel.ts
-│   │   │   ├── orderController.ts
-│   │   │   ├── orderRoutes.ts
-│   │   │   └── orderService.ts
-│   ├── app.ts
-│   └── server.ts`
+
+  ```
+  project/
+  ├── src/
+  │   ├── features/
+  │   │   ├── books/
+  │   │   │   ├── bookModel.ts
+  │   │   │   ├── bookController.ts
+  │   │   │   ├── bookRoutes.ts
+  │   │   │   └── bookService.ts
+  │   │   ├── orders/
+  │   │   │   ├── orderModel.ts
+  │   │   │   ├── orderController.ts
+  │   │   │   ├── orderRoutes.ts
+  │   │   │   └── orderService.ts
+  │   ├── app.ts
+  │   └── server.ts
+  ```
 
 - **Bicycle Management**
 
