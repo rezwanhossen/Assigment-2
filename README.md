@@ -21,12 +21,12 @@ An Express application built with TypeScript and MongoDB, managing a bicycle sto
   ```
   project/
   ├── src/
-  │   ├── features/
-  │   │   ├── books/
-  │   │   │   ├── bookModel.ts
-  │   │   │   ├── bookController.ts
-  │   │   │   ├── bookRoutes.ts
-  │   │   │   └── bookService.ts
+  │   ├── modules/
+  │   │   ├── products/
+  │   │   │   ├── productModel.ts
+  │   │   │   ├── productController.ts
+  │   │   │   ├── productRoutes.ts
+  │   │   │   └── productService.ts
   │   │   ├── orders/
   │   │   │   ├── orderModel.ts
   │   │   │   ├── orderController.ts
