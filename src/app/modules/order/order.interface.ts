@@ -1,6 +1,6 @@
 export interface Torder {
   email: string;
-  productId: string;
+  product: string;
   quantity: number;
   totalPrice: number;
   createdAt?: Date;

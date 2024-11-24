@@ -7,7 +7,7 @@ const orserSchema = new Schema<Torder>(
       type: String,
       required: [true, 'email is requried, pleace give a email'],
     },
-    productId: {
+    product: {
       type: String,
       required: [true, 'Product id must be required'],
     },

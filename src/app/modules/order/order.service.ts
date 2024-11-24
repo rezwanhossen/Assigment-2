@@ -1,10 +1,10 @@
 import { Torder } from './order.interface';
-import product from '../products/products.model';
+import Product from '../products/products.model';
 import order from './order.model';
 
 const creatOrder = async (paylod: Torder) => {
-  const { email, productId, quantity } = paylod;
-  const foundProduct = await product.findById(productId);
+  const { email, product, quantity } = paylod;
+  const foundProduct = await Product.findById(product);
   if (!foundProduct) {
     throw new Error('Product not found');
   }
@@ -19,7 +19,7 @@ const creatOrder = async (paylod: Torder) => {
   const totalPrice = foundProduct.price * quantity;
   const orders = await order.create({
     email,
-    productId,
+    product,
     quantity,
     totalPrice,
   });

@@ -1,8 +1,8 @@
 import { Tproducts } from './products.interface';
-import product from './products.model';
+import Product from './products.model';
 
 const creatproduct = async (paylod: Tproducts) => {
-  const result = await product.create(paylod);
+  const result = await Product.create(paylod);
   return result;
 };
 const getAllproduct = async (searchTerm: string) => {
@@ -15,21 +15,21 @@ const getAllproduct = async (searchTerm: string) => {
         ],
       }
     : {};
-  const result = await product.find(filter);
+  const result = await Product.find(filter);
   return result;
 };
 const getSingleproduct = async (id: string) => {
-  const result = await product.findById(id);
+  const result = await Product.findById(id);
   return result;
 };
 const updateproduct = async (id: string, data: Tproducts) => {
-  const result = await product.findByIdAndUpdate(id, data, {
+  const result = await Product.findByIdAndUpdate(id, data, {
     new: true,
   });
   return result;
 };
 const deletedproduct = async (id: string) => {
-  const result = await product.findByIdAndDelete(id);
+  const result = await Product.findByIdAndDelete(id);
   return result;
 };
 

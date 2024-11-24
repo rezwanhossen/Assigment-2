@@ -28,5 +28,5 @@ const productSchema = new Schema<Tproducts>(
   { timestamps: true, versionKey: false },
 );
 
-const product = model<Tproducts>('product', productSchema);
-export default product;
+const Product = model<Tproducts>('product', productSchema);
+export default Product;
